@@ -9,8 +9,8 @@ namespace MyRecipe
 {
     internal class DB
     {
-
-        MySqlConnection connection = new MySqlConnection("server=localhost;port=3306;username=root;password=Vfrcbv250500!;database=myrecipesdb");
+        //Вводим данные для подключения к базе данны
+        MySqlConnection connection = new MySqlConnection("server= ;port= ;username=  ;password= ;database= ");
 
         public void openConnection()
         {
