@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Xamarin.Forms.5.0.0.2515\build\Xamarin.Forms.props" Condition="Exists('..\packages\Xamarin.Forms.5.0.0.2515\build\Xamarin.Forms.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{065CEB33-8410-4E7F-B276-1D4F2055B6AD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MyRecipe</RootNamespace>
+    <AssemblyName>MyRecipe</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>D:\MySQLConnect\v4.8\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.5.0.0.2515\lib\netstandard2.0\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.5.0.0.2515\lib\netstandard2.0\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.5.0.0.2515\lib\netstandard2.0\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\ProductList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ProductList.Designer.cs">
+      <DependentUpon>ProductList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DB.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAbout.Designer.cs">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAdd.Designer.cs">
+      <DependentUpon>FormAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormFavorites.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormFavorites.Designer.cs">
+      <DependentUpon>FormFavorites.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSearch.Designer.cs">
+      <DependentUpon>FormSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Controls\RecipeListem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\RecipeListem.Designer.cs">
+      <DependentUpon>RecipeListem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RecipeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecipeView.Designer.cs">
+      <DependentUpon>RecipeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemeColor.cs" />
+    <EmbeddedResource Include="Controls\ProductList.resx">
+      <DependentUpon>ProductList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAbout.resx">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAdd.resx">
+      <DependentUpon>FormAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormFavorites.resx">
+      <DependentUpon>FormFavorites.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSearch.resx">
+      <DependentUpon>FormSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\RecipeListem.resx">
+      <DependentUpon>RecipeListem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecipeView.resx">
+      <DependentUpon>RecipeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-поиск-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-избранное-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-плюс-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-о-нас-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-звезда-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Снимок.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-показать-язык-801.png" />
+    <None Include="Resources\icons8-показать-язык-80.png" />
+    <None Include="Resources\icons8-спасибо-150.png" />
+    <None Include="Resources\icons8-часы-48.png" />
+    <None Include="Resources\icons8-закрыть-окно-48.png" />
+    <None Include="Resources\icons8-x-50.png" />
+    <Content Include="Resources\icons8-звезда %282%29.png" />
+    <Content Include="Resources\icons8-морская-звезда-30.png" />
+    <None Include="Resources\icons8-подтверждение-и-обновление-32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Xamarin.Forms.5.0.0.2515\build\Xamarin.Forms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Forms.5.0.0.2515\build\Xamarin.Forms.props'))" />
+    <Error Condition="!Exists('..\packages\Xamarin.Forms.5.0.0.2515\build\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Forms.5.0.0.2515\build\Xamarin.Forms.targets'))" />
+  </Target>
+  <Import Project="..\packages\Xamarin.Forms.5.0.0.2515\build\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.5.0.0.2515\build\Xamarin.Forms.targets')" />
+</Project>
